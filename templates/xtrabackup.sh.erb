@@ -65,6 +65,7 @@ run_innobackupx() {
   log "INFO: Preparing backup files"
   INNOBACKUP_LOCATION=$(find ${BACKUP_LOCATION}/* -type d -print -quit)
   time innobackupex --apply-log $INNOBACKUP_LOCATION >> $LOGFILE 2>&1
+  chown -R ${BACKUP_USER}:${BACKUP_GROUP} ${INNOBACKUP_LOCATION}
   check_status
   log "INFO: Backup Process Complete"
 }

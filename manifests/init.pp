@@ -164,6 +164,8 @@ class xtrabackup (
   $backup_script_location = '/usr/local/bin/',
   $mysql_user = '', # Required
   $mysql_pass = '', # Required
+  $backup_user = '',
+  $backup_group = '',
   $enable_cron = true,
   $cron_hour = '1', # Cronjob defaults for daily at 1AM
   $cron_minute = '0',
