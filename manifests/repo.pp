@@ -12,7 +12,7 @@ class xtrabackup::repo inherits xtrabackup {
           gpgcheck => 1,
         }
       }
-      
+
       /^(Debian|Ubuntu)$/:{
         include apt
         apt::source { 'percona':
